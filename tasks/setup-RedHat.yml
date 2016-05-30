@@ -5,4 +5,4 @@
   yum:
     name: "{{ item }}"
     state: installed
-  with_items: tomcat7_packages
+  with_items: '{{ tomcat7_packages }}'
