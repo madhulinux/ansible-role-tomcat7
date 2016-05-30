@@ -1,1 +1,1 @@
-servers ansible_ssh_host=localhost
+localhost
