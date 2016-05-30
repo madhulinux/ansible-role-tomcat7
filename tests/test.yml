@@ -4,6 +4,6 @@
 - name: Install Tomcat 7.
   hosts: servers
   roles:
-    - role: ansible-role-tomcat7
+    - role: role_under_test
       tomcat7_packages:
         - tomcat

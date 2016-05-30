@@ -37,8 +37,7 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
   # Some Tomcat debugging (show all the logs).
-  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm cat /var/log/mysql/error.log || true
-  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm cat /var/log/mysql.err || true
-  
+  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm cat /var/log/tomcat/catalina.out || true
+
   # Clean up
   - sudo docker stop "$(cat ${container_id})"
