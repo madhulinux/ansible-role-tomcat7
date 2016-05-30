@@ -6,7 +6,7 @@ python:
 env:
   - SITE=test.yml
 
-before_installl:
+before_install:
   - yum install -y epel-release
   - yum install -y ansible
 
