@@ -1,8 +1,4 @@
 ---
-language: python
-python:
-  - 2.7
-
 env:
   - distribution: centos
     version: 7
@@ -38,6 +34,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   # Some Tomcat debugging (show all the logs).
   - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm cat /var/log/tomcat/catalina.out || true
+  - sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ss -ntlup || true
 
   # Clean up
   - sudo docker stop "$(cat ${container_id})"
