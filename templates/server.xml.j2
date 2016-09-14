@@ -69,7 +69,7 @@
     -->
     <Connector port="{{ tomcat7_catalina_port }}" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="{{ tomcat7_catalina_redirect_port }}" />
+               redirectPort="{{ tomcat7_catalina_redirect_port }}" {% if tomcat7_uriencoding %}URIEncoding="{{ tomcat7_uriencoding }}" {% endif %}/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -89,7 +89,7 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="{{ tomcat7_ajp_port }}" protocol="AJP/1.3" redirectPort="{{ tomcat7_catalina_redirect_port }}" />
+    <Connector port="{{ tomcat7_ajp_port }}" protocol="AJP/1.3" redirectPort="{{ tomcat7_catalina_redirect_port }}" {% if tomcat7_uriencoding %}URIEncoding="{{ tomcat7_uriencoding }}" {% endif %}/>
 
 
     <!-- An Engine represents the entry point (within Catalina) that processes

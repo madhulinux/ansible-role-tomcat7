@@ -26,6 +26,7 @@ Available variables are listed below, along with default values (see `defaults/m
 * `tomcat7_catalina_port: 8080`
 * `tomcat7_catalina_redirect_port: 8443`
 * `tomcat7_ajp_port: 8009`
+* `tomcat7_uriencoding: ""`
 
 ## Dependencies
 

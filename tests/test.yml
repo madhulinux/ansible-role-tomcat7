@@ -7,3 +7,4 @@
     - role: ansible-role-tomcat7
       tomcat7_packages:
         - tomcat
+      tomcat7_uriencoding: "UTF-8"
